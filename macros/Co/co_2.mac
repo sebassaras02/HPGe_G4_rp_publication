@@ -1,0 +1,8 @@
+/gps/particle ion
+/gps/ion 27 60
+# any position plus 6.32 cm
+/gps/pos/centre 0 0 11.32 cm
+/gps/ene/type Gauss
+/gps/pos/type Point
+/gps/ang/type iso
+/run/beamOn 1000000

@@ -1,0 +1,8 @@
+/vis/open OGL
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/drawVolume
+/vis/geometry/set/visibility World 0 false
+/vis/viewer/set/autoRefresh true
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
+

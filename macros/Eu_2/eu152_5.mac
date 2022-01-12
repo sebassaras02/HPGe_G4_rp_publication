@@ -1,0 +1,8 @@
+/gps/particle gamma
+/gps/energy 244.7 keV
+# any position plus 6.32 cm
+/gps/pos/centre 0 0 26.32 cm
+/gps/ene/type Gauss
+/gps/pos/type Point
+/gps/ang/type iso
+/run/beamOn 1000000

@@ -1,0 +1,35 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/sebas/Documentos/HPGenew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eda4b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eda4b.dir/build.make CMakeFiles/cmTC_eda4b.dir/build
+make[1]: se entra en el directorio '/home/sebas/Documentos/HPGenew/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eda4b.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_eda4b.dir/CheckSymbolExists.c.o   -c /home/sebas/Documentos/HPGenew/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_eda4b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eda4b.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_eda4b.dir/CheckSymbolExists.c.o  -o cmTC_eda4b 
+CMakeFiles/cmTC_eda4b.dir/CheckSymbolExists.c.o: En la función `main':
+CheckSymbolExists.c:(.text+0x1b): referencia a `pthread_create' sin definir
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_eda4b.dir/build.make:97: fallo en las instrucciones para el objetivo 'cmTC_eda4b'
+make[1]: *** [cmTC_eda4b] Error 1
+make[1]: se sale del directorio '/home/sebas/Documentos/HPGenew/build/CMakeFiles/CMakeTmp'
+Makefile:126: fallo en las instrucciones para el objetivo 'cmTC_eda4b/fast'
+make: *** [cmTC_eda4b/fast] Error 2
+
+File /home/sebas/Documentos/HPGenew/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
